@@ -1,18 +1,20 @@
 {
   "name": "react-lotus",
   "version": "1.0.0",
-  "description": "",
+  "description": "A project that aims to centralize web and mobile React projects",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --env production",
-    "start": "webpack-dev-server --env development"
+    "build:web": "webpack --env production",
+    "start:web:dev": "webpack-dev-server --env development",
+    "start:mobile:dev": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/helloimbguedes/react-lotus.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "bguedes",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/helloimbguedes/react-lotus/issues"
@@ -22,7 +24,19 @@
     "html-webpack-plugin": "^3.2.0",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0",
-    "webpack-dev-server": "^3.2.1"
+    "webpack-dev-server": "^3.2.1",
+    "@babel/core": "^7.4.3",
+    "@babel/runtime": "^7.4.3",
+    "babel-jest": "^24.7.1",
+    "jest": "^24.7.1",
+    "metro-react-native-babel-preset": "^0.53.1",
+    "react-test-renderer": "16.8.3"
   },
-  "dependencies": {}
+  "dependencies": {
+    "react": "16.8.3",
+    "react-native": "0.59.5"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
 }
